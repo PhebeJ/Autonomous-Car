@@ -1,6 +1,36 @@
 # Autonomous-Car
 
-Autonomous Car 
+In order to build a driverless car, we need to start from scratch which are designing the agent(i.e. car) and the virtual environment.
+The virtual environment consists of static as well as dynamic agents.
+The brain of the agent is coded in such a way to fulfill two major objectives.
+The Python(version 2.7) is used for coding.
+
+**MDP**
+
+- Markov Decision process is used to take decisions where outcomes are uncertain.
+- In this algorithm agent’s main goal is to take that path through which it can maximize its output that is collect maximum rewards.
+- Each state in our environment is assigned with a certain value which is calculated using RL.
+
+![alt text](docs\value.png)
+
+**REINFORCEMENT LEARNING**
+
+*Basic Idea:* 
+- Receive feedback in the form of rewards
+- Agent’s Utility is defined by the reward function
+- Maximise the expected rewards
+- Learning is based on observed samples of outcomes
+
+**OUTPUT**
+
+- The car [yellow square] is able to traverse the virtual environment, while avoiding the various obstacles [ other cars { blue and aqua coloured squares }, buildings, roads] in its path.
+- The car generally chooses the fastest route to the destination.
+- The car manages to obey certain basic rules such as keeping to the road.
+
+![alt text](docs\output.png)    
+
+----------------------
+-----------------------
 
 ## Commands
 

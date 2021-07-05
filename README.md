@@ -11,7 +11,7 @@ The Python(version 2.7) is used for coding.
 - In this algorithm agent’s main goal is to take that path through which it can maximize its output that is collect maximum rewards.
 - Each state in our environment is assigned with a certain value which is calculated using RL.
 
-![alt text](docs\value.png)
+![alt text](docs/value.png)
 
 **REINFORCEMENT LEARNING**
 
@@ -27,7 +27,7 @@ The Python(version 2.7) is used for coding.
 - The car generally chooses the fastest route to the destination.
 - The car manages to obey certain basic rules such as keeping to the road.
 
-![alt text](docs\output.png)    
+![alt text](docs/output.png)    
 
 ----------------------
 -----------------------

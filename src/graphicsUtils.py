@@ -1,11 +1,5 @@
 # graphicsUtils.py
 # ----------------
-# Licensing Information: Please do not distribute or publish solutions to this
-# project. You are free to use and extend these projects for educational
-# purposes. The Car AI projects were developed at UC Berkeley, primarily by
-# John DeNero (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
-# For more info, see http://inst.eecs.berkeley.edu/~cs188/sp09/car.html
-
 import sys
 import math
 import random
@@ -131,11 +125,6 @@ def draw_background():
 
 def _destroy_window(event=None):
     sys.exit(0)
-#    global _root_window
-#    _root_window.destroy()
-#    _root_window = None
-    #print "DESTROY"
-
 def end_graphics():
     global _root_window, _canvas, _mouse_enabled
     try:
@@ -186,9 +175,6 @@ def circle(pos, r, outlineColor, fillColor, endpoints=None, style='pieslice', wi
 
     return _canvas.create_arc(x0, y0, x1, y1, outline=outlineColor, fill=fillColor,
                               extent=e[1] - e[0], start=e[0], style=style, width=width)
-    #return _canvas.create_arc(x0, y0, x1, y1, outline=outlineColor, fill=fillColor,
-     #                         extent=e[1] - e[0], start=e[0], style=style, width=width)
-
 def image(pos, file="../../car.gif"):
     x, y = pos
     img = PhotoImage(file=file)
@@ -202,8 +188,6 @@ def moveCircle(id, pos, r, endpoints=None):
     global _canvas_x, _canvas_y
 
     x, y = pos
-#    x0, x1 = x - r, x + r + 1
-#    y0, y1 = y - r, y + r + 1
     x0, x1 = x - r - 1, x + r
     y0, y1 = y - r - 1, y + r
     if endpoints == None:

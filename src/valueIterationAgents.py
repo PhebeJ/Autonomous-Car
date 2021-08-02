@@ -1,15 +1,7 @@
 # valueIterationAgents.py
 # -----------------------
-# Licensing Information: Please do not distribute or publish solutions to this
-# project. You are free to use and extend these projects for educational
-# purposes. The Car AI projects were developed at UC Berkeley, primarily by
-# John DeNero (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
-# For more info, see http://inst.eecs.berkeley.edu/~cs188/sp09/car.html
-
 import mdp, util
-
 from learningAgents import ValueEstimationAgent
-
 class ValueIterationAgent(ValueEstimationAgent):
   """
       * Please read learningAgents.py before reading this.*
@@ -67,9 +59,6 @@ class ValueIterationAgent(ValueEstimationAgent):
     for (sp, tValue) in  self.mdp.getTransitionStatesAndProbs(state, action):  
         qValue += tValue * (self.mdp.getReward(state, action, sp) + self.discount * self.values[sp] )
     return qValue;
-
-    #util.raiseNotDefined()
-
   def getPolicy(self, state):
     """
       The policy is the best action in the given state
@@ -87,8 +76,6 @@ class ValueIterationAgent(ValueEstimationAgent):
         for action in actions:
             qValues[actions.index(action)] = self.getQValue(state, action) 
         return actions[qValues.argMax()];      
-    #util.raiseNotDefined()
-
   def getAction(self, state):
     "Returns the policy at the state (no exploration)."
     return self.getPolicy(state)

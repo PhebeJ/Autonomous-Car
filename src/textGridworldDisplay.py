@@ -1,13 +1,6 @@
 # textGridworldDisplay.py
 # -----------------------
-# Licensing Information: Please do not distribute or publish solutions to this
-# project. You are free to use and extend these projects for educational
-# purposes. The Car AI projects were developed at UC Berkeley, primarily by
-# John DeNero (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
-# For more info, see http://inst.eecs.berkeley.edu/~cs188/sp09/car.html
-
 import util
-
 class TextGridworldDisplay:
   
   def __init__(self, gridworld):
@@ -108,25 +101,13 @@ def prettyPrintNullValues(gridWorld, currentState = None):
       newRow = []
       for x in range(grid.width):
         state = (x, y)
-
-        # value = values[state]
-
         action = None
-        # if policy != None and state in policy:
-        #   action = policy[state]
-        # 
         actions = gridWorld.getPossibleActions(state)
 
         if action not in actions and 'exit' in actions:
           action = 'exit'
 
         valString = None
-        # if action == 'exit':
-        #   valString = border('%.2f' % value)
-        # else:
-        #   valString = '\n\n%.2f\n\n' % value
-        #   valString += ' '*maxLen
-
         if grid[x][y] == 'S':
           valString = '\n\nS\n\n'
           valString += ' '*maxLen

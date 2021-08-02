@@ -1,11 +1,5 @@
 # graphicsGridworldDisplay.py
 # ---------------------------
-# Licensing Information: Please do not distribute or publish solutions to this
-# project. You are free to use and extend these projects for educational
-# purposes. The Car AI projects were developed at UC Berkeley, primarily by
-# John DeNero (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
-# For more info, see http://inst.eecs.berkeley.edu/~cs188/sp09/car.html
-
 import util
 from graphicsUtils import *
 
@@ -40,7 +34,6 @@ class GraphicsGridworldDisplay:
       values[state] = 0.0
       #policy[state] = agent.getPolicy(state)
     drawNullValues(self.gridworld, currentState,'')
-    # drawValues(self.gridworld, values, policy, currentState, message)
     sleep(0.05 / self.speed)
 
   def displayQValues(self, agent, currentState = None, message = 'Agent Q-Values'):
@@ -200,10 +193,7 @@ def drawNullSquare(grid,x, y, isObstacle, isTerminal, isCurrent):
 
   if not isObstacle and isCurrent:
     circle( (screen_x, screen_y), 0.1*GRID_SIZE, LOCATION_COLOR, fillColor=LOCATION_COLOR )
-
-  # if not isObstacle:
-  #   text( (screen_x, screen_y), text_color, valStr, "Courier", 24, "bold", "c")
-      
+     
 def drawSquare(x, y, val, min, max, valStr, action, isObstacle, isTerminal, isCurrent):
 
   square_color = getColor(val, min, max)
